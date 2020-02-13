@@ -50,7 +50,6 @@ export default function renderVoyagerPage(options: MiddlewareOptions) {
             'Content-Type': 'application/json',
           }, ${headersJS}),
           body: JSON.stringify({query: introspectionQuery }),
-          credentials: 'include',
         }).then(function (response) {
           return response.text();
         }).then(function (responseBody) {
